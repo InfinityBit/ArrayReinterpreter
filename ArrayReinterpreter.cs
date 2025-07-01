@@ -50,16 +50,16 @@ namespace InfinityBit
 
         #region AsByteArray
 
+        public T GetFromByteArray(Action<byte[]> action)
+        {
+            AsByteArray(m_structBuffer, action);
+            return m_structBuffer[0];
+        }
+
         public void AsByteArray(T value, Action<byte[]> action)
         {
             m_structBuffer[0] = value;
             AsByteArray(m_structBuffer, action);
-        }
-
-        public T AsByteArray(Action<byte[]> action)
-        {
-            AsByteArray(m_structBuffer, action);
-            return m_structBuffer[0];
         }
 
         public void AsByteArray(ref T value, Action<byte[]> action)
@@ -152,7 +152,7 @@ namespace InfinityBit
             }
         }
 
-        public T AsStructArray(byte[] byteArray)
+        public T AsStruct(byte[] byteArray)
         {
             if (byteArray.Length != SizeOfItem)
             {

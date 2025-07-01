@@ -36,7 +36,7 @@ namespace InfinityBit.IO
         {
             ArrayReinterpreter<T> reinterpreter = GetReinterpreter<T>();
 
-            return reinterpreter.AsByteArray(bytes => 
+            return reinterpreter.GetFromByteArray(bytes => 
             { 
                 if (m_stream.Read(bytes, 0, bytes.Length) < bytes.Length)
                     throw new EndOfStreamException();

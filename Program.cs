@@ -107,7 +107,7 @@ namespace InfinityBit
             Console.Write("From bytes: ");
             PrintArray(bytes);
 
-            uint result = reinterpreter.AsStructArray(bytes);
+            uint result = reinterpreter.AsStruct(bytes);
             Console.WriteLine("Was made uint: 0x{0:X}\n", result);
         }
 
