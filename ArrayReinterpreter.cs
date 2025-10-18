@@ -84,7 +84,7 @@ namespace InfinityBit
                 return;
             }
 
-            int length= structArray.Length;
+            int length = structArray.Length;
             ArrayUnion union = new ArrayUnion { Structs = structArray };
 
             GCHandle gcHandle = GCHandle.Alloc(structArray, GCHandleType.Pinned);

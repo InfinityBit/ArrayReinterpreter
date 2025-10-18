@@ -15,7 +15,7 @@ namespace InfinityBit.IO
             set
             {
                 if (value == null)
-                    throw new ArgumentNullException("Stream can not be null");
+                    throw new ArgumentNullException(nameof(Stream), "Stream can not be null");
 
                 m_stream = value;
             }
